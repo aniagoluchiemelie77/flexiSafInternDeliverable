@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Elite Cars Dealership</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Elite Cars Dealership</h1>
+        <p>Your trusted partner in finding the perfect ride!</p>
+    </header>
+    <nav id="nav">
+        <a href="#">Home</a> |
+        <a href="#">Inventory</a> |
+        <a href="#">About Us</a> |
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h2 class="main_h2">Welcome to Elite Cars</h2>
+        <p class="main_p">Discover our collection of premium cars, from luxury sedans to high-performance sports vehicles.</p>
+        <h3 class="main_h3">Featured Cars:</h3>
+        <div class="main_cardiv">
+            <div>
+                <img src="images/Tesla.jpeg" alt="2025 Tesla Model S Image" />
+                <p class="lead_p">2025 Tesla Model S</p>
+                <p class="car_price">Price: $79,000.00</p>
+            </div>
+            <div>
+                <img src="images/BMW.jpeg" alt="2024 BMW M5 Image"/>
+                <p class="lead_p">2024 BMW M5</p>
+                <p class="car_price">Price: $90,000.00</p> 
+            </div>
+            <div>
+                <img src="images/Mercedes.jpeg" alt="2025 Mercedes-Benz G-Class Image"/>
+                <p class="lead_p">2025 Mercedes-Benz G-Class</p> 
+                <p class="car_price">Price: $130,000.00</p>
+            </div>
+        </div>
+
+        <h3 class="main_h3">Car Inquiry Form</h3>
+        <form id="carForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Chiemelie Aniagolu"><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" required placeholder="+234-91-2231-2493"><br><br>
+
+            <label for="carModel">Car Model:</label>
+            <select id="carModel" name="carModel">
+                <option value="Tesla Model S">2025 Tesla Model S</option>
+                <option value="BMW M5">2024 BMW M5</option>
+                <option value="Mercedes-Benz G-Class">2025 Mercedes-Benz G-Class</option>
+            </select><br><br>
+
+            <label for="budget">Budget ($):</label>
+            <input type="number" id="budget" name="budget" min="5000" required><br><br>
+
+            <label for="purchaseDate">Preferred Purchase Date:</label>
+            <input type="date" id="purchaseDate" name="purchaseDate"><br><br>
+
+            <label>Payment Method:</label>
+            <input type="radio" id="cash" name="paymentMethod" value="Cash">
+            <label for="cash">Cash</label>
+            <input type="radio" id="finance" name="paymentMethod" value="Financing">
+            <label for="finance">Financing</label><br><br>
+
+            <label for="tradeIn">Trade-in Vehicle?</label>
+            <input type="checkbox" id="tradeIn" name="tradeIn"><br><br>
+
+            <label for="license">Upload Driver's License:</label>
+            <input type="file" id="license" name="license"><br><br>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Elite Cars Dealership. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("carForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            
+            Swal.fire({
+                title: "Thank you!",
+                text: "Your inquiry has been submitted successfully.",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        });
+    </script>
+</body>
+</html>
+
