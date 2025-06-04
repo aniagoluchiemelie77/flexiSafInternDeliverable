@@ -1,212 +1,355 @@
-
 *,
 *::after,
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit; 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-    margin: 0;
-    scroll-behavior: smooth;
-    scroll-behavior: cubic-bezier(0.2, 0, 0.38, 1);
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-behavior: cubic-bezier(0.2, 0, 0.38, 1);
 }
-a, p{
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 1.5;
-    text-decoration: none;
+a,
+p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5;
+  text-decoration: none;
 }
-body{
-    position: relative;
-    background-color: #eee;
+body {
+  position: relative;
+  background-color: #eee;
 }
-.header{
-    min-width: 100%;
-    height: 85vh;
-    background-image: url('images/car_image1.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: 0;
-    text-align: center;
-    background-blend-mode: darken;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.header {
+  min-width: 100%;
+  height: 90vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
-.header h1{
-    font-size: 6rem;
-    color: antiquewhite;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 2s;
+.header h1 {
+  font-size: 6rem;
+  align-self: center;
+  color: #fafafa;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 2s;
 }
-.header p{
-    color: antiquewhite;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typewriter 3s steps(40) forwards;
-    animation-delay: 4s;
-    -webkit-animation: typewriter 3s steps(40) forwards;
+.header p {
+  align-self: center;
+  color: #fafafa;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typewriter 3s steps(40) forwards;
+  animation-delay: 4s;
+  -webkit-animation: typewriter 3s steps(40) forwards;
 }
-#nav{
-    width: 100%;
-    padding: 2rem;
-    margin-top: 1rem;
+.header div {
+  border: 1px solid #fafafa;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
 }
-#nav a{
-    width: fit-content;
-    border: 1.5px solid #222;
-    color: #222;
-    background-color: #eee;
-    padding: 1.3rem 1rem;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-    transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
+.header div:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
 }
-#nav a:hover{
-    background-color: #222;
-    color: #eee;
+.header_div1 {
+  grid-area: 1 / 1 / 2 / 3;
+  background-image: url("images/car1.jpeg");
+  background-size: cover;
+  background-position: center;
 }
-main{
-    padding: 1.5rem;
-    margin-top: 1rem;
-    background-image: linear-gradient(to bottom, #eee, white);
+.header_div2 {
+  grid-area: 1 / 3 / 2 / -1;
+  background-image: url("images/car2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.main_h2{
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 3rem;
-    text-decoration: underline;
-    padding: 2rem;
+.header_div3 {
+  grid-area: 2 / 1 / 4 / 2;
+  background-position: center;
+  background-image: url("images/car3.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.main_p{
-    padding: 1rem;
+.header_div4 {
+  grid-area: 2 / 2 / 3 / 4;
+  background-image: url("images/car4.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.main_h3{
-    padding: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
+.header_div5 {
+  grid-area: 2 / 4 / 4 / -1;
+  background-image: url("images/car5.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.main_cardiv{
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.header_div6 {
+  grid-area: 3 / 2 / 5 / 4;
+  background-image: url("images/car6.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  justify-content: center;
 }
-.main_cardiv div{
-    position: relative;
-    width: 25rem;
-    height: 46vh;
-    margin: 1rem;
-    padding: 0;
-    border: 1px solid #222;
-    transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
+.header_div7 {
+  grid-area: 4 / 1 / -1 / 3;
+  background-image: url("images/car7.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.main_cardiv div:hover{
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
+.header_div8 {
+  grid-area: 4 / 3 / -1 / -1;
+  background-image: url("images/Tesla.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.main_cardiv div img{
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
+#nav {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 1rem;
 }
-.main_cardiv div .lead_p{
-    position: absolute;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    top: 0;
-    left: 0;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    margin: .3rem .4rem;
+#nav a {
+  width: fit-content;
+  border: 1.5px solid #222;
+  color: #222;
+  background-color: #eee;
+  padding: 1.3rem 1rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
 }
-.main_cardiv div .car_price{
-    padding: .5rem 1rem;
-    font-weight: 700;
+#nav a:hover {
+  background-color: #222;
+  color: #eee;
 }
-footer{
-    background-color: #222;
-    padding: 1.5rem;
+main {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  background-image: linear-gradient(to bottom, #eee, white);
 }
-footer p{
-    color: #eee;
+.main_h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 3rem;
+  text-decoration: underline;
+  padding: 2rem;
 }
-#carForm{
-    padding: 1.5rem;
-    border: .7px solid #222;
-    width: 35vw;
-    background-color: white;
+.main_p {
+  padding: 1rem;
 }
-#carForm input{
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.5rem;
-    border: none;
-    outline: 1px solid #222;
-    margin-top: 1rem;
+.main_h3 {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
-#carForm label{
-    font-weight: 700;
-    font-size: 1.4rem;
+.main_cardiv {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main_cardiv div {
+  position: relative;
+  width: 25rem;
+  height: 46vh;
+  margin: 1rem;
+  padding: 0;
+  border: 1px solid #222;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+.main_cardiv div:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+.main_cardiv div img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+.main_cardiv div .lead_p {
+  position: absolute;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  margin: 0.3rem 0.4rem;
+}
+.main_cardiv div .car_price {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+}
+footer {
+  background-color: #222;
+  padding: 1.5rem;
+}
+footer p {
+  color: #eee;
+}
+#carForm {
+  padding: 1.5rem;
+  border: 0.7px solid #222;
+  width: 35vw;
+  background-color: white;
+}
+#carForm input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  outline: 1px solid #222;
+  margin-top: 1rem;
+}
+#carForm label {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 #carForm input[type="radio"] {
-    width: 20px;
-    margin-left: 1rem;
-    outline: none;
-    height: 20px;
-    accent-color: #222;
-    cursor: pointer;
+  width: 20px;
+  margin-left: 1rem;
+  outline: none;
+  height: 20px;
+  accent-color: #222;
+  cursor: pointer;
 }
 #carForm input[type="checkbox"] {
-    width: 20px;
-    margin-left: 1rem;
-    outline: none;
-    height: 20px;
-    accent-color: #222;
-    cursor: pointer;
+  width: 20px;
+  margin-left: 1rem;
+  outline: none;
+  height: 20px;
+  accent-color: #222;
+  cursor: pointer;
 }
-#carForm button{
-    padding: 1rem;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    background-color: #222;
-    color: #eee;
-    border: none;
-    cursor: pointer;
+#carForm button {
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  cursor: pointer;
 }
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 48rem) and (max-width: 64rem) {
+  a,
+  p,
+  li {
+    font-size: 2rem;
+  }
+  .header h1 {
+    font-size: 5rem;
+  }
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main_cardiv {
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  .main_cardiv div {
+    min-width: 30rem;
+  }
+  #carForm {
+    width: 50vw;
+  }
+  #carForm label {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 47rem) {
+  a,
+  p {
+    font-size: 1.5rem;
+  }
+  .header h1 {
+    font-size: 4rem;
+  }
+  #nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  main {
+    padding: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+  }
+  .main_h3 {
+    font-size: 2.5rem;
+  }
+  .main_cardiv {
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  .main_cardiv div {
+    min-width: 26rem;
+  }
+  #carForm {
+    width: 100%;
+  }
+  #carForm label {
+    font-size: 1.5rem;
+  }
 }
