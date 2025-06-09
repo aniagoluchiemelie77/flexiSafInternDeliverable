@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
     <title>Elite Cars Dealership</title>
 </head>
@@ -22,105 +23,125 @@
         <div class="header_div7"></div>
         <div class="header_div8"></div>
     </header>
-    <nav id="nav">
-        <a href="#">Home</a> |
-        <a href="#">Inventory</a> |
-        <a href="#">About Us</a> |
-        <a href="#">Contact</a>
-    </nav>
-    <main>
-        <h2 class="main_h2">Welcome to Elite Cars</h2>
-        <p class="main_p">Discover our collection of premium cars, from luxury sedans to high-performance sports vehicles.</p>
-        <h3 class="main_h3">Featured Cars:</h3>
-        <div class="main_cardiv">
-            <div>
-                <img src="images/car1.jpeg" alt="2025 Tesla Model S Image" />
-                <p class="lead_p">Rolls Royce Phantom</p>
-                <p class="car_price">Price: $300,000.00</p>
-            </div>
-            <div>
-                <img src="images/car2.jpeg" alt="2025 Tesla Model S Image" />
-                <p class="lead_p">2025 Volkswaggen</p>
-                <p class="car_price">Price: $50,000.00</p>
-            </div>
-            <div>
-                <img src="images/car3.jpeg" alt="2025 Tesla Model S Image" />
-                <p class="lead_p">2025 Tesla</p>
-                <p class="car_price">Price: $150,000.00</p>
-            </div>
-            <div>
-                <img src="images/Tesla.jpeg" alt="2025 Tesla Model S Image" />
-                <p class="lead_p">2025 Tesla Model S</p>
-                <p class="car_price">Price: $79,000.00</p>
-            </div>
-            <div>
-                <img src="images/BMW.jpeg" alt="2024 BMW M5 Image"/>
-                <p class="lead_p">2024 BMW M5</p>
-                <p class="car_price">Price: $90,000.00</p> 
-            </div>
-            <div>
-                <img src="images/Mercedes.jpeg" alt="2025 Mercedes-Benz G-Class Image"/>
-                <p class="lead_p">2025 Mercedes-Benz G-Class</p> 
-                <p class="car_price">Price: $130,000.00</p>
+    <center>
+        <div id="nav">
+            <a onclick="showTab('home')">Home</a> |
+            <a onclick="showTab('enquiry')">Make Vehicle Enquiry</a> |
+            <a onclick="showTab('about')">About Us</a> |
+            <a onclick="showTab('contact')">Contact Us</a>
+        </div>
+    </center>
+    <div class="body_container">
+        <div class="body_container-div1 tab-content" id="home">
+            <h2 class="main_h2">Welcome to Elite Cars</h2>
+            <p class="main_p">Discover our collection of premium cars, from luxury sedans to high-performance sports vehicles.</p>
+            <h3 class="main_h3">Featured Cars:</h3>
+            <div class="main_cardiv">
+                <div>
+                    <img src="images/car1.jpeg" alt="2025 Tesla Model S Image" />
+                    <p class="lead_p">Rolls Royce Phantom</p>
+                    <p class="car_price">Price: $300,000.00</p>
+                </div>
+                <div>
+                    <img src="images/car2.jpeg" alt="2025 Tesla Model S Image" />
+                    <p class="lead_p">2025 Volkswaggen</p>
+                    <p class="car_price">Price: $50,000.00</p>
+                </div>
+                <div>
+                    <img src="images/car3.jpeg" alt="2025 Tesla Model S Image" />
+                    <p class="lead_p">2025 Tesla</p>
+                    <p class="car_price">Price: $150,000.00</p>
+                </div>
+                <div>
+                    <img src="images/Tesla.jpeg" alt="2025 Tesla Model S Image" />
+                    <p class="lead_p">2025 Tesla Model S</p>
+                    <p class="car_price">Price: $79,000.00</p>
+                </div>
+                <div>
+                    <img src="images/BMW.jpeg" alt="2024 BMW M5 Image"/>
+                    <p class="lead_p">2024 BMW M5</p>
+                    <p class="car_price">Price: $90,000.00</p> 
+                </div>
+                <div>
+                    <img src="images/Mercedes.jpeg" alt="2025 Mercedes-Benz G-Class Image"/>
+                    <p class="lead_p">2025 Mercedes-Benz G-Class</p> 
+                    <p class="car_price">Price: $130,000.00</p>
+                </div>
             </div>
         </div>
-
-        <h3 class="main_h3">Car Inquiry Form</h3>
-        <form id="carForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Chiemelie Aniagolu"><br><br>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
-
-            <label for="phone">Phone Number:</label>
-            <input type="number" id="phone" name="phone" required placeholder="+234-91-2231-2493"><br><br>
-
-            <label for="carModel">Car Model:</label>
-            <select id="carModel" name="carModel">
-                <option value="Tesla Model S">2025 Tesla Model S</option>
-                <option value="BMW M5">2024 BMW M5</option>
-                <option value="Mercedes-Benz G-Class">2025 Mercedes-Benz G-Class</option>
-            </select><br><br>
-
-            <label for="budget">Budget ($):</label>
-            <input type="number" id="budget" name="budget" min="5000" required><br><br>
-
-            <label for="purchaseDate">Preferred Purchase Date:</label>
-            <input type="date" id="purchaseDate" name="purchaseDate"><br><br>
-
-            <label>Payment Method:</label>
-            <input type="radio" id="cash" name="paymentMethod" value="Cash">
-            <label for="cash">Cash</label>
-            <input type="radio" id="finance" name="paymentMethod" value="Financing">
-            <label for="finance">Financing</label><br><br>
-
-            <label for="tradeIn">Trade-in Vehicle?</label>
-            <input type="checkbox" id="tradeIn" name="tradeIn"><br><br>
-
-            <label for="license">Upload Driver's License:</label>
-            <input type="file" id="license" name="license"><br><br>
-
-            <button type="submit">Submit Inquiry</button>
-        </form>
-    </main>
-
+        <div class="body_container-div2 tab-content" id="enquiry">
+            <form id="carForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Chiemelie Aniagolu"><br><br>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="phone" required placeholder="+234-91-2231-2493"><br><br>
+    
+                <label for="carModel">Car Model:</label>
+                <select id="carModel" name="carModel">
+                    <option value="Tesla Model S">2025 Tesla Model S</option>
+                    <option value="BMW M5">2024 BMW M5</option>
+                    <option value="Mercedes-Benz G-Class">2025 Mercedes-Benz G-Class</option>
+                </select><br><br>
+    
+                <label for="budget">Budget ($):</label>
+                <input type="number" id="budget" name="budget" min="5000" required><br><br>
+    
+                <label for="purchaseDate">Preferred Purchase Date:</label>
+                <input type="date" id="purchaseDate" name="purchaseDate"><br><br>
+    
+                <label>Payment Method:</label>
+                <input type="radio" id="cash" name="paymentMethod" value="Cash">
+                <label for="cash">Cash</label>
+                <input type="radio" id="finance" name="paymentMethod" value="Financing">
+                <label for="finance">Financing</label><br><br>
+    
+                <label for="tradeIn">Trade-in Vehicle?</label>
+                <input type="checkbox" id="tradeIn" name="tradeIn"><br><br>
+    
+                <label for="license">Upload Driver's License:</label>
+                <input type="file" id="license" name="license"><br><br>
+    
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+        <div class="body_container-div3 tab-content" id="about">
+            <p class="main_p">Founded in 3rd February 2000, Elite Cars Dealership has been a trusted name in the automotive industry, dedicated to providing top-quality vehicles and unmatched customer service. Located in Effurun, Nigeria, we serve car enthusiasts and buyers looking for luxury, performance, and reliability.
+                            With years of expertise, we’ve built a reputation for excellence by offering a premium selection of vehicles at competitive prices. Our team of professionals is committed to guiding you through every step of your car-buying journey, ensuring a seamless and stress-free experience.
+                            </p>
+            <p class="main_p">At Elite Cars Dealership, we stand by our values of integrity, transparency, and trust. It's not just about selling cars—it’s about helping you find the perfect match for your lifestyle.
+                            Let us help you drive your dreams.</p>
+            <p class="main_p"> Visit us at River Rd, Effurun, Delta State today!
+            </p>
+        </div>
+        <div class="body_container-div4 tab-content" id="contact">
+            <p class="main_p">At Elite Cars Dealership, we’re always here to assist you. Whether you have questions about our inventory, need expert advice, or want to schedule a visit, our team is ready to help!</p>
+            <div class="contacts_div">
+                <p>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>Location:</span> River Rd, Effurun, Delta State </p>
+                <p>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>Phone:</span> +2349054223480</p> 
+                <p>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Email:</span> elitecars2000@gmail.com</p>  
+                <p>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <span>Website:</span> wearelitedealers.com</p>
+            </div>
+            <p class="main_p">Our business hours are [Opening Hours], so feel free to stop by or give us a call. You can also reach out via email, and our team will get back to you promptly.
+                We look forward to helping you drive your dreams!
+            </p>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Elite Cars Dealership. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById("carForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent actual form submission
-            
-            Swal.fire({
-                title: "Thank you!",
-                text: "Your inquiry has been submitted successfully.",
-                icon: "success",
-                confirmButtonText: "OK"
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 

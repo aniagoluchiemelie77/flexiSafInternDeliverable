@@ -125,11 +125,15 @@ body {
   background-position: center;
 }
 #nav {
-  width: 100%;
+  width: 50%;
   padding: 2rem;
   margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 #nav a {
+  cursor: pointer;
   width: fit-content;
   border: 1.5px solid #222;
   color: #222;
@@ -150,7 +154,7 @@ body {
   background-color: #222;
   color: #eee;
 }
-main {
+.body_container-div1{
   padding: 1.5rem;
   margin-top: 1rem;
   background-image: linear-gradient(to bottom, #eee, white);
@@ -175,6 +179,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .main_cardiv div {
   position: relative;
@@ -288,6 +293,38 @@ footer p {
     width: 100%;
   }
 }
+.body_container-div2{
+  display: none;
+}
+.body_container-div3{
+  display: none;
+  max-width: 75%;
+}
+.body_container-div4{
+  display: none;
+  max-width: 75%;
+}
+.body_container-div4 p{
+  padding: 1rem;
+}
+.body_container-div4 p span{
+  font-weight: 700;
+}
+.body_container-div4 p i{
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+.body_container{
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#nav a.active {
+    background-color: #222;
+    color: #eee;
+}
 @media only screen and (min-width: 48rem) and (max-width: 64rem) {
   a,
   p,
@@ -331,7 +368,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  main {
+  .body_container-div1 {
     padding: 1rem;
     margin-top: 0;
     padding: 1rem;
